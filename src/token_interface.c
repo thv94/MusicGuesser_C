@@ -155,7 +155,7 @@ void token_interface_refresh_access_token(void)
         return;
     }
 
-    snprintf(post_data, sizeof(post_data), "grant_type=refresh_token&refresh_token=%s&client_id=%s&client_secret=%s", refresh_token, client_id, client_secret);
+    sprintf(post_data, "grant_type=refresh_token&refresh_token=%s&client_id=%s&client_secret=%s", refresh_token, client_id, client_secret);
 
     headers = curl_slist_append(headers, "Content-Type: application/x-www-form-urlencoded");
 
@@ -196,7 +196,7 @@ void token_interface_refresh_access_token(void)
 
                 /* Write Token Time */
                 /* NOTE: For whatever reason when calling refresh expires_in does not have a valuestring value, only valueint */
-                snprintf(token_time, (TOKEN_TIME_BUFFER_SIZE - 1), "%d", expires_in_json->valueint);
+                sprintf(token_time, "%d", expires_in_json->valueint);
                 token_time[TOKEN_TIME_BUFFER_SIZE - 1] = '\0';
                 token_interface_save_expiration_time(expires_in_json->valueint);
 
@@ -231,7 +231,7 @@ void token_interface_get_initial_access_token(void)
     {
         headers = curl_slist_append(headers, "Content-Type: application/x-www-form-urlencoded");
 
-        snprintf(post_data, sizeof(post_data), "grant_type=authorization_code&code=%s&redirect_uri=%s&client_id=%s&client_secret=%s", auth_code, REDIRECT_URI, client_id, client_secret);
+        sprintf(post_data, "grant_type=authorization_code&code=%s&redirect_uri=%s&client_id=%s&client_secret=%s", auth_code, REDIRECT_URI, client_id, client_secret);
 
         curl_easy_setopt(curl, CURLOPT_URL, "https://accounts.spotify.com/api/token");
         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);

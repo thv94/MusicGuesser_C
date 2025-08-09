@@ -1,0 +1,103 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/mnt/c/Users/user/MyStuff/Code/MusicGuesser_C/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+$(OBJ_DIR)	makefile	/^$(OBJ_DIR):$/;"	t
+$(OBJ_DIR)/%.o	makefile	/^$(OBJ_DIR)\/%.o: $(SRC_DIR)\/%.c | $(OBJ_DIR)$/;"	t
+$(TARGET)	makefile	/^$(TARGET): $(OBJ_FILES)$/;"	t
+ACCESS_TOKEN_BUFFER_SIZE	include/token_interface.h	/^#define ACCESS_TOKEN_BUFFER_SIZE /;"	d
+ACCESS_TOKEN_FILE_NAME	include/token_interface.h	/^#define ACCESS_TOKEN_FILE_NAME /;"	d
+AUTH_CODE_BUFFER_SIZE	include/token_interface.h	/^#define AUTH_CODE_BUFFER_SIZE /;"	d
+AUTH_CODE_FILE_NAME	include/token_interface.h	/^#define AUTH_CODE_FILE_NAME /;"	d
+AUTH_HEADER_BUFFER_SIZE	include/spotify_interface.h	/^#define AUTH_HEADER_BUFFER_SIZE /;"	d
+CC	makefile	/^CC = gcc$/;"	m
+CFLAGS	makefile	/^CFLAGS = -Wall -Wextra -Werror -Wpedantic -std=$(CSTD) $(OPT_LEVEL) -Wshadow -Wpointer-arith -Wc/;"	m
+CLIENT_ID_BUFFER_SIZE	include/token_interface.h	/^#define CLIENT_ID_BUFFER_SIZE /;"	d
+CLIENT_ID_FILE_NAME	include/token_interface.h	/^#define CLIENT_ID_FILE_NAME /;"	d
+CLIENT_SECRET_BUFFER_SIZE	include/token_interface.h	/^#define CLIENT_SECRET_BUFFER_SIZE /;"	d
+CLIENT_SECRET_FILE_NAME	include/token_interface.h	/^#define CLIENT_SECRET_FILE_NAME /;"	d
+CSTD	makefile	/^CSTD = c90$/;"	m
+CURL_URL_BUFFER_SIZE	include/spotify_interface.h	/^#define CURL_URL_BUFFER_SIZE /;"	d
+CURL_URL_BUFFER_SIZE	include/token_interface.h	/^#define CURL_URL_BUFFER_SIZE /;"	d
+DB_INTERFACE_H	include/db_interface.h	/^#define DB_INTERFACE_H$/;"	d
+DEFAULT_FINAL_ANSWER_WAIT_DURATION_SEC	src/music_guesser.c	/^#define DEFAULT_FINAL_ANSWER_WAIT_DURATION_SEC /;"	d	file:
+DEFAULT_MAX_YEAR	src/music_guesser.c	/^#define DEFAULT_MAX_YEAR /;"	d	file:
+DEFAULT_MIN_YEAR	src/music_guesser.c	/^#define DEFAULT_MIN_YEAR /;"	d	file:
+DEFAULT_NUM_ROUNDS	src/music_guesser.c	/^#define DEFAULT_NUM_ROUNDS /;"	d	file:
+DEFAULT_POSITION_MS	src/music_guesser.c	/^#define DEFAULT_POSITION_MS /;"	d	file:
+DEFAULT_SONG_PLAY_DURATION_SEC	src/music_guesser.c	/^#define DEFAULT_SONG_PLAY_DURATION_SEC /;"	d	file:
+DEFAULT_SONG_WAIT_DURATION_SEC	src/music_guesser.c	/^#define DEFAULT_SONG_WAIT_DURATION_SEC /;"	d	file:
+DEVICE_ID_BUFFER_SIZE	include/token_interface.h	/^#define DEVICE_ID_BUFFER_SIZE /;"	d
+DEVICE_ID_FILE_NAME	include/token_interface.h	/^#define DEVICE_ID_FILE_NAME /;"	d
+INCLUDES	makefile	/^INCLUDES = -Iinclude\/$/;"	m
+INC_DIR	makefile	/^INC_DIR = include$/;"	m
+LIBS	makefile	/^LIBS = -lcurl -lsqlite3 -lcjson$/;"	m
+MUSIC_DB_FILE	src/db_interface.c	/^#define MUSIC_DB_FILE /;"	d	file:
+MusicGuesser_C	README.md	/^# MusicGuesser_C$/;"	c
+OBJ_DIR	makefile	/^OBJ_DIR = .o$/;"	m
+OBJ_FILES	makefile	/^OBJ_FILES = $(patsubst $(SRC_DIR)\/%.c,$(OBJ_DIR)\/%.o,$(SRC_FILES))$/;"	m
+OPT_LEVEL	makefile	/^OPT_LEVEL = -O2$/;"	m
+PLAY_SONG_JSON_BUFFER_SIZE	include/spotify_interface.h	/^#define PLAY_SONG_JSON_BUFFER_SIZE /;"	d
+POST_DATA_BUFFER_SIZE	include/token_interface.h	/^#define POST_DATA_BUFFER_SIZE /;"	d
+Prerequisites	README.md	/^# Prerequisites$/;"	c
+QueryResult	include/db_interface.h	/^} QueryResult;$/;"	t	typeref:struct:__anon0f0e71a40108
+RANDOM_SONG_SQL_BUFFER_SIZE	include/db_interface.h	/^#define RANDOM_SONG_SQL_BUFFER_SIZE /;"	d
+REDIRECT_URI	include/token_interface.h	/^#define REDIRECT_URI /;"	d
+REFRESH_TOKEN_BUFFER_SIZE	include/token_interface.h	/^#define REFRESH_TOKEN_BUFFER_SIZE /;"	d
+REFRESH_TOKEN_FILE_NAME	include/token_interface.h	/^#define REFRESH_TOKEN_FILE_NAME /;"	d
+RESPONSE_BUFFER_SIZE	include/token_interface.h	/^#define RESPONSE_BUFFER_SIZE /;"	d
+Running	README.md	/^# Running$/;"	c
+SEC_TO_MS	src/music_guesser.c	/^#define SEC_TO_MS /;"	d	file:
+SONG_ID_BUFFER_SIZE	include/db_interface.h	/^#define SONG_ID_BUFFER_SIZE /;"	d
+SONG_ID_BUFFER_SIZE	include/spotify_interface.h	/^#define SONG_ID_BUFFER_SIZE /;"	d
+SONG_ID_IDX	include/db_interface.h	/^#define SONG_ID_IDX /;"	d
+SPOTIFY_INTERFACE_H	include/spotify_interface.h	/^#define SPOTIFY_INTERFACE_H$/;"	d
+SRC_DIR	makefile	/^SRC_DIR = src$/;"	m
+SRC_FILES	makefile	/^SRC_FILES = $(wildcard $(SRC_DIR)\/*.c)$/;"	m
+Setup	README.md	/^# Setup$/;"	c
+TARGET	makefile	/^TARGET = music_guesser$/;"	m
+TOKEN_DATA_DIR	include/token_interface.h	/^#define TOKEN_DATA_DIR /;"	d
+TOKEN_INTERFACE_H	include/token_interface.h	/^#define TOKEN_INTERFACE_H$/;"	d
+TOKEN_TIMESTAMP_FILE_NAME	include/token_interface.h	/^#define TOKEN_TIMESTAMP_FILE_NAME /;"	d
+TOKEN_TIME_BUFFER_SIZE	include/token_interface.h	/^#define TOKEN_TIME_BUFFER_SIZE /;"	d
+UTILS_H	include/utils.h	/^#define UTILS_H$/;"	d
+__anon0f0e71a40108	include/db_interface.h	/^{$/;"	s
+access_token	include/token_interface.h	/^static char access_token[ACCESS_TOKEN_BUFFER_SIZE];$/;"	v	typeref:typename:char[]
+all	makefile	/^all: $(OBJ_DIR) $(TARGET)$/;"	t
+auth_code	include/token_interface.h	/^static char auth_code[AUTH_CODE_BUFFER_SIZE];$/;"	v	typeref:typename:char[]
+clean	makefile	/^clean:$/;"	t
+client_id	include/token_interface.h	/^static char client_id[CLIENT_ID_BUFFER_SIZE];$/;"	v	typeref:typename:char[]
+client_secret	include/token_interface.h	/^static char client_secret[CLIENT_SECRET_BUFFER_SIZE];$/;"	v	typeref:typename:char[]
+db_interface_get_random_song_id	src/db_interface.c	/^void db_interface_get_random_song_id(sqlite3* db, int year, char random_song_id[SONG_ID_BUFFER_S/;"	f	typeref:typename:void
+db_interface_get_random_song_id_callback	src/db_interface.c	/^int db_interface_get_random_song_id_callback(void *data, int argc, char **argv, char **colName) $/;"	f	typeref:typename:int
+db_interface_open_db	src/db_interface.c	/^int db_interface_open_db(sqlite3 **db)$/;"	f	typeref:typename:int
+device_id	include/token_interface.h	/^static char device_id[DEVICE_ID_BUFFER_SIZE];$/;"	v	typeref:typename:char[]
+discard_callback	src/spotify_interface.c	/^size_t discard_callback(void *ptr, size_t size, size_t nmemb, void *userdata) {$/;"	f	typeref:typename:size_t
+generate_random_year	src/music_guesser.c	/^int generate_random_year(int min_year, int max_year)$/;"	f	typeref:typename:int
+main	src/music_guesser.c	/^int main(int argc, char** argv) {$/;"	f	typeref:typename:int
+refresh_token	include/token_interface.h	/^static char refresh_token[REFRESH_TOKEN_BUFFER_SIZE];$/;"	v	typeref:typename:char[]
+show_final_answer	src/music_guesser.c	/^void show_final_answer(int year, int final_answer_wait_duration_sec)$/;"	f	typeref:typename:void
+song_id	include/db_interface.h	/^    char song_id[SONG_ID_BUFFER_SIZE];$/;"	m	struct:__anon0f0e71a40108	typeref:typename:char[]
+spotify_interface_pause_music	src/spotify_interface.c	/^void spotify_interface_pause_music(void)$/;"	f	typeref:typename:void
+spotify_interface_play_music	src/spotify_interface.c	/^void spotify_interface_play_music(const char* song_id, int position_ms) $/;"	f	typeref:typename:void
+token_interface_extract_and_store_access_token	src/token_interface.c	/^void token_interface_extract_and_store_access_token(const char *response) $/;"	f	typeref:typename:void
+token_interface_get_access_token	src/token_interface.c	/^char* token_interface_get_access_token(void)$/;"	f	typeref:typename:char *
+token_interface_get_device_id	src/token_interface.c	/^char* token_interface_get_device_id(void)$/;"	f	typeref:typename:char *
+token_interface_get_initial_access_token	src/token_interface.c	/^void token_interface_get_initial_access_token(void) $/;"	f	typeref:typename:void
+token_interface_is_token_expired	src/token_interface.c	/^int token_interface_is_token_expired(void) {$/;"	f	typeref:typename:int
+token_interface_populate_access_token	src/token_interface.c	/^void token_interface_populate_access_token(void)$/;"	f	typeref:typename:void
+token_interface_read_all_value_files	src/token_interface.c	/^void token_interface_read_all_value_files(void)$/;"	f	typeref:typename:void
+token_interface_read_value_file	src/token_interface.c	/^int token_interface_read_value_file(char* buffer, int buffer_size, const char* filename)$/;"	f	typeref:typename:int
+token_interface_refresh_access_token	src/token_interface.c	/^void token_interface_refresh_access_token(void) $/;"	f	typeref:typename:void
+token_interface_save_expiration_time	src/token_interface.c	/^void token_interface_save_expiration_time(int expires_in) $/;"	f	typeref:typename:void
+token_interface_save_token_to_file	src/token_interface.c	/^void token_interface_save_token_to_file(const char* token, const char* filename)$/;"	f	typeref:typename:void
+token_interface_token_callback	src/token_interface.c	/^size_t token_interface_token_callback(void *ptr, size_t size, size_t nmemb, void *userdata) {$/;"	f	typeref:typename:size_t
+token_time	include/token_interface.h	/^static char token_time[TOKEN_TIME_BUFFER_SIZE];$/;"	v	typeref:typename:char[]
+utils_file_exists	src/utils.c	/^int utils_file_exists(const char* filename)$/;"	f	typeref:typename:int

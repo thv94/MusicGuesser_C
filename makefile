@@ -8,9 +8,9 @@ OBJ_DIR = .o
 
 CFLAGS = -Wall -Wextra -Werror -Wpedantic -std=$(CSTD) $(OPT_LEVEL) -Wshadow -Wpointer-arith -Wcast-align -Wstrict-prototypes -Wcast-qual -Wswitch-default -Wswitch-enum -Wunreachable-code -Wfloat-equal -Wconversion -Wdouble-promotion -Wmissing-prototypes -Wundef -Wunused-macros -Wwrite-strings
 
-INCLUDES = -Iinclude/ -I/opt/homebrew/include
+INCLUDES = -Iinclude/
 
-LIBS = -lcurl -lsqlite3 -lcjson -L/opt/homebrew/lib 
+LIBS = -lcurl -lsqlite3 -lcjson
 
 TARGET = music_guesser
 
@@ -23,7 +23,7 @@ $(OBJ_DIR):
 	mkdir -p $(OBJ_DIR)
 
 $(TARGET): $(OBJ_FILES)
-	$(CC) $(CFLAGS) $(LIBS) $^ -o $@
+	$(CC) $(CFLAGS) $^ -o $@ $(LIBS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@

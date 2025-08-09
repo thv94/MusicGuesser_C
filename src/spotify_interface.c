@@ -24,13 +24,13 @@ void spotify_interface_play_music(const char* song_id, int position_ms)
     {
         headers = curl_slist_append(headers, "Content-Type: application/json");
 
-        snprintf(auth_header, sizeof(auth_header), "Authorization: Bearer %s", token_interface_get_access_token());
+        sprintf(auth_header, "Authorization: Bearer %s", token_interface_get_access_token());
 
         headers = curl_slist_append(headers, auth_header);
 
-        snprintf(json_data, sizeof(json_data), "{ \"uris\": [\"%s\"] , \"position_ms\": %d}", song_id, position_ms);
+        sprintf(json_data, "{ \"uris\": [\"%s\"] , \"position_ms\": %d}", song_id, position_ms);
 
-        snprintf(curl_url, sizeof(curl_url), "https://api.spotify.com/v1/me/player/play?device_id=%s", token_interface_get_device_id());
+        sprintf(curl_url, "https://api.spotify.com/v1/me/player/play?device_id=%s", token_interface_get_device_id());
 
         printf("PLAY AUTH HEADER: %s\n", auth_header);
         printf("PLAY JSON DATA: %s\n", json_data);
@@ -66,7 +66,7 @@ void spotify_interface_pause_music(void)
     {
         headers = curl_slist_append(headers, "Content-Type: application/json");
 
-        snprintf(auth_header, sizeof(auth_header), "Authorization: Bearer %s", token_interface_get_access_token());
+        sprintf(auth_header, "Authorization: Bearer %s", token_interface_get_access_token());
 
         headers = curl_slist_append(headers, auth_header);
 

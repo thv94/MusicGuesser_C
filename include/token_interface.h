@@ -19,7 +19,7 @@
 #define TOKEN_TIME_BUFFER_SIZE    1024
 
 #define CURL_URL_BUFFER_SIZE      1024
-#define POST_DATA_BUFFER_SIZE     1024
+#define POST_DATA_BUFFER_SIZE     4096
 
 #define TOKEN_DATA_DIR "token_data/"
 

@@ -20,12 +20,12 @@ int db_interface_open_db(sqlite3 **db)
 void db_interface_get_random_song_id(sqlite3* db, int year, char random_song_id[SONG_ID_BUFFER_SIZE])
 {
     int rc;
-    QueryResult query_result = { .song_id = "" };
+    QueryResult query_result;
     char sql[RANDOM_SONG_SQL_BUFFER_SIZE];
     char *errMsg = 0;
     memset(query_result.song_id, 0, sizeof(query_result.song_id));
 
-    snprintf(sql, sizeof(sql), "SELECT * FROM General WHERE Year=%d ORDER BY RANDOM() LIMIT 1", year);
+    sprintf(sql, "SELECT * FROM General WHERE Year=%d ORDER BY RANDOM() LIMIT 1", year);
 
     rc = sqlite3_exec(db, sql, db_interface_get_random_song_id_callback, &query_result, &errMsg);
 
