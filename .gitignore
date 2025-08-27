@@ -2,4 +2,5 @@ music_guesser
 token_data/
 music.db
 api_utils/
-.o/
+bin/
+build/

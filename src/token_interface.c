@@ -1,5 +1,14 @@
 #include "token_interface.h"
 
+char auth_code[AUTH_CODE_BUFFER_SIZE];
+char client_id[CLIENT_ID_BUFFER_SIZE];
+char client_secret[CLIENT_SECRET_BUFFER_SIZE];
+char device_id[DEVICE_ID_BUFFER_SIZE];
+
+char access_token[ACCESS_TOKEN_BUFFER_SIZE];
+char refresh_token[REFRESH_TOKEN_BUFFER_SIZE];
+char token_time[TOKEN_TIME_BUFFER_SIZE];
+
 char* token_interface_get_access_token(void)
 {
     return access_token;

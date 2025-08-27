@@ -63,6 +63,10 @@ int main(int argc, char** argv) {
 
         db_interface_get_random_song_id(db, year, random_song_id);
 
+        spotify_interface_add_to_queue(random_song_id);
+
+        spotify_interface_next_track();
+
         spotify_interface_play_music(random_song_id, play_position_ms);
 
         sleep((unsigned int)song_play_duration_sec);

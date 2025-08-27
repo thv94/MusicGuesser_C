@@ -33,15 +33,6 @@
 
 #define REDIRECT_URI "http://localhost:8888/callback"
 
-static char auth_code[AUTH_CODE_BUFFER_SIZE];
-static char client_id[CLIENT_ID_BUFFER_SIZE];
-static char client_secret[CLIENT_SECRET_BUFFER_SIZE];
-static char device_id[DEVICE_ID_BUFFER_SIZE];
-
-static char access_token[ACCESS_TOKEN_BUFFER_SIZE];
-static char refresh_token[REFRESH_TOKEN_BUFFER_SIZE];
-static char token_time[TOKEN_TIME_BUFFER_SIZE];
-
 char* token_interface_get_access_token(void);
 char* token_interface_get_device_id(void);
 size_t token_interface_token_callback(void *ptr, size_t size, size_t nmemb, void *userdata);

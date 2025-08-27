@@ -1,32 +1,49 @@
 CC = gcc
 CSTD = c90
-OPT_LEVEL = -O2
+
+DEBUG ?= 0
 
 SRC_DIR = src
 INC_DIR = include
-OBJ_DIR = .o
-
-CFLAGS = -Wall -Wextra -Werror -Wpedantic -std=$(CSTD) $(OPT_LEVEL) -Wshadow -Wpointer-arith -Wcast-align -Wstrict-prototypes -Wcast-qual -Wswitch-default -Wswitch-enum -Wunreachable-code -Wfloat-equal -Wconversion -Wdouble-promotion -Wmissing-prototypes -Wundef -Wunused-macros -Wwrite-strings
-
-INCLUDES = -Iinclude/
+DEBUG_BIN_DIR = bin/debug
+DEBUG_BUILD_DIR = build/debug
+RELEASE_BIN_DIR = bin/release
+RELEASE_BUILD_DIR = build/release
 
 LIBS = -lcurl -lsqlite3 -lcjson
+CFLAGS = -Wall -Wextra -Werror -Wpedantic -I$(INC_DIR) -std=$(CSTD) -Wshadow -Wpointer-arith -Wcast-align -Wstrict-prototypes -Wcast-qual -Wswitch-default -Wswitch-enum -Wunreachable-code -Wfloat-equal -Wconversion -Wdouble-promotion -Wmissing-prototypes -Wundef -Wunused-macros -Wwrite-strings
 
 TARGET = music_guesser
 
+ifeq ($(DEBUG), 1)
+	BIN_DIR = $(DEBUG_BIN_DIR)
+	BUILD_DIR = $(DEBUG_BUILD_DIR)
+	CFLAGS += -g -O0
+else
+	BIN_DIR = $(RELEASE_BIN_DIR)
+	BUILD_DIR = $(RELEASE_BUILD_DIR)
+	CFLAGS += -O2
+endif
+
 SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
-OBJ_FILES = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRC_FILES))
+OBJ_FILES = $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRC_FILES))
 
-all: $(OBJ_DIR) $(TARGET)
+all: $(BUILD_DIR) $(BIN_DIR)/$(TARGET)
 
-$(OBJ_DIR):
-	mkdir -p $(OBJ_DIR)
+debug:
+	$(MAKE) all DEBUG=1
 
-$(TARGET): $(OBJ_FILES)
+release:
+	$(MAKE) all DEBUG=0
+
+$(BIN_DIR) $(BUILD_DIR):
+	mkdir -p $@
+
+$(BIN_DIR)/$(TARGET): $(OBJ_FILES) | $(BIN_DIR)
 	$(CC) $(CFLAGS) $^ -o $@ $(LIBS)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c | $(BUILD_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@ $(LIBS)
 
 clean:
-	rm -rf $(OBJ_FILES) $(TARGET)
+	rm -rf $(DEBUG_BUILD_DIR) $(DEBUG_BIN_DIR) $(RELEASE_BUILD_DIR) $(RELEASE_BIN_DIR)
